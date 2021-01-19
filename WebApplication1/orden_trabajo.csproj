@@ -1,0 +1,573 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09BE769C-A0F2-4F64-8EA5-413C8A6BC74B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Libreria, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libreria\Libreria\bin\Debug\Libreria.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="boot\cerrar_sesion.aspx" />
+    <Content Include="boot\combo_articulo.aspx" />
+    <Content Include="boot\combo_maquina.aspx" />
+    <Content Include="boot\contenedor_menu_admin.aspx" />
+    <Content Include="boot\contenedor_menu.aspx" />
+    <Content Include="boot\contenedor_menu_em.aspx" />
+    <Content Include="boot\contenedor_menu_admin_mant.aspx" />
+    <Content Include="boot\contenedor_password.aspx" />
+    <Content Include="boot\control_cambio_pass.aspx" />
+    <Content Include="boot\control_ot_n3.aspx" />
+    <Content Include="boot\control_rechazar_resolucion.aspx" />
+    <Content Include="boot\control_verificacion.aspx" />
+    <Content Include="boot\control_resolucion.aspx" />
+    <Content Include="boot\control_aprobar_mant.aspx" />
+    <Content Include="boot\control_aprobar.aspx" />
+    <Content Include="boot\control_cancelar.aspx" />
+    <Content Include="boot\control_asignacion.aspx" />
+    <Content Include="boot\control_ot_ja.aspx" />
+    <Content Include="boot\control_ot.aspx" />
+    <Content Include="boot\css\bootstrap4-toggle.css" />
+    <Content Include="boot\css\bootstrap4-toggle.min.css" />
+    <Content Include="boot\css\jquery-ui.css" />
+    <Content Include="boot\css\bootstrap-select.css" />
+    <Content Include="boot\css\jquery.modal.css" />
+    <Content Include="boot\css\jquery.modal.theme-atlant.css" />
+    <Content Include="boot\css\jquery.modal.theme-xenon.css" />
+    <Content Include="boot\css\jquerysctipttop.css" />
+    <Content Include="boot\css\reset.css" />
+    <Content Include="boot\css\sb-admin.css" />
+    <Content Include="boot\css\sb-admin.min.css" />
+    <Content Include="boot\css\style.css" />
+    <Content Include="boot\css\StyleSheet1.css" />
+    <Content Include="boot\css\sweetalert.css" />
+    <Content Include="boot\estilos\css\combo.css" />
+    <Content Include="boot\estilos\css\grilla.css" />
+    <Content Include="boot\estilos\css\jquery.modal.css" />
+    <Content Include="boot\estilos\css\jquery.modal.theme-atlant.css" />
+    <Content Include="boot\estilos\css\jquery.modal.theme-xenon.css" />
+    <Content Include="boot\estilos\css\reset.css" />
+    <Content Include="boot\estilos\css\sb-admin.css" />
+    <Content Include="boot\estilos\css\sb-admin.min.css" />
+    <Content Include="boot\estilos\css\style.css" />
+    <Content Include="boot\estilos\css\styles_loading.css" />
+    <Content Include="boot\estilos\css\sweetalert.css" />
+    <Content Include="boot\estilos\estilo_calendario.css" />
+    <Content Include="boot\estilos\js\jquery-2.1.1.js" />
+    <Content Include="boot\estilos\js\jquery.modal.js" />
+    <Content Include="boot\estilos\js\jquery.modal.min.js" />
+    <Content Include="boot\estilos\js\main.js" />
+    <Content Include="boot\estilos\js\modernizr.js" />
+    <Content Include="boot\estilos\js\sb-admin-charts.js" />
+    <Content Include="boot\estilos\js\sb-admin-charts.min.js" />
+    <Content Include="boot\estilos\js\sb-admin-datatables.js" />
+    <Content Include="boot\estilos\js\sb-admin-datatables.min.js" />
+    <Content Include="boot\estilos\js\sb-admin.js" />
+    <Content Include="boot\estilos\js\sb-admin.min.js" />
+    <Content Include="boot\estilos\js\velocity.min.js" />
+    <Content Include="boot\estilos\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="boot\estilos\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="boot\estilos\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="boot\estilos\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="boot\estilos\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="boot\estilos\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="boot\estilos\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="boot\estilos\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="boot\estilos\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="boot\estilos\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="boot\estilos\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="boot\estilos\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="boot\estilos\vendor\chart.js\Chart.js" />
+    <Content Include="boot\estilos\vendor\chart.js\Chart.min.js" />
+    <Content Include="boot\estilos\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="boot\estilos\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="boot\estilos\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="boot\estilos\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="boot\estilos\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="boot\estilos\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="boot\estilos\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="boot\estilos\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="boot\estilos\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="boot\estilos\vendor\jquery\jquery.js" />
+    <Content Include="boot\estilos\vendor\jquery\jquery.min.js" />
+    <Content Include="boot\estilos\vendor\jquery\jquery.slim.js" />
+    <Content Include="boot\estilos\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="boot\grilla_detalle_ot.aspx" />
+    <Content Include="boot\img\sprites.24.png" />
+    <Content Include="boot\img\sprites.32.png" />
+    <Content Include="boot\img\sprites.png" />
+    <Content Include="boot\img\sprites1.png" />
+    <Content Include="boot\img\sprites2.png" />
+    <Content Include="boot\img\sprites3.png" />
+    <Content Include="boot\grilla_estado_perf1.aspx" />
+    <Content Include="boot\informe_estado_perf1.aspx" />
+    <Content Include="boot\informe_veri_admin.aspx" />
+    <Content Include="boot\informe_resolucion.aspx" />
+    <Content Include="boot\informe_ot_em.aspx" />
+    <Content Include="boot\informe_ot_mant.aspx" />
+    <Content Include="boot\informe_ot_admin.aspx" />
+    <Content Include="boot\informe_ot.aspx" />
+    <Content Include="boot\js\bootstrap4-toggle.js" />
+    <Content Include="boot\js\bootstrap4-toggle.min.js" />
+    <Content Include="boot\js\data_picker.js" />
+    <Content Include="boot\js\data_picker_2.js" />
+    <Content Include="boot\js\grilla.js" />
+    <Content Include="boot\js\grilla_2.js" />
+    <Content Include="boot\js\jquery-ui.js" />
+    <Content Include="boot\js\combo_buscar.js" />
+    <Content Include="boot\js\bootstrap.bundle.min.js" />
+    <Content Include="boot\js\jquery-3.2.1.slim.min.js" />
+    <Content Include="boot\js\alert.js" />
+    <Content Include="boot\js\alerta.js" />
+    <Content Include="boot\js\bootstrap-select.js" />
+    <Content Include="boot\js\bootstrap-select.min.js" />
+    <Content Include="boot\js\enviar_datos.js" />
+    <Content Include="boot\js\Gruntfile.js" />
+    <Content Include="boot\js\jquery-2.1.1.js" />
+    <Content Include="boot\js\jquery.modal.js" />
+    <Content Include="boot\js\jquery.modal.min.js" />
+    <Content Include="boot\js\jquery.preloaders.js" />
+    <Content Include="boot\js\jquery.preloaders.min.js" />
+    <Content Include="boot\js\main.js" />
+    <Content Include="boot\js\modernizr.js" />
+    <Content Include="boot\js\sb-admin-charts.js" />
+    <Content Include="boot\js\sb-admin-charts.min.js" />
+    <Content Include="boot\js\sb-admin-datatables.js" />
+    <Content Include="boot\js\sb-admin-datatables.min.js" />
+    <Content Include="boot\js\sb-admin.js" />
+    <Content Include="boot\js\sb-admin.min.js" />
+    <Content Include="boot\js\traer_clases.js" />
+    <Content Include="boot\js\velocity.min.js" />
+    <Content Include="boot\libreria\SAPbobsCOM90.dll" />
+    <Content Include="boot\libreria_calendario\compressed\legacy.js" />
+    <Content Include="boot\libreria_calendario\compressed\picker.date.js" />
+    <Content Include="boot\libreria_calendario\compressed\picker.js" />
+    <Content Include="boot\libreria_calendario\compressed\picker.time.js" />
+    <Content Include="boot\libreria_calendario\compressed\themes\classic.css" />
+    <Content Include="boot\libreria_calendario\compressed\themes\classic.date.css" />
+    <Content Include="boot\libreria_calendario\compressed\themes\classic.time.css" />
+    <Content Include="boot\libreria_calendario\compressed\themes\default.css" />
+    <Content Include="boot\libreria_calendario\compressed\themes\default.date.css" />
+    <Content Include="boot\libreria_calendario\compressed\themes\default.time.css" />
+    <Content Include="boot\libreria_calendario\compressed\themes\rtl.css" />
+    <Content Include="boot\libreria_calendario\compressed\translations\ar.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\bg_BG.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\bs_BA.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\ca_ES.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\cs_CZ.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\da_DK.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\de_DE.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\el_GR.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\es_ES.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\et_EE.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\eu_ES.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\fa_IR.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\fi_FI.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\fr_FR.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\ge_GEO.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\gl_ES.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\he_IL.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\hi_IN.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\hr_HR.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\hu_HU.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\id_ID.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\is_IS.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\it_IT.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\ja_JP.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\km_KH.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\ko_KR.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\lt_LT.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\lv_LV.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\nb_NO.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\ne_NP.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\nl_NL.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\no_NO.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\pl_PL.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\pt_BR.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\pt_PT.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\ro_RO.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\ru_RU.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\sk_SK.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\sl_SI.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\sr_RS_cy.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\sr_RS_lt.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\sv_SE.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\th_TH.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\tr_TR.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\uk_UA.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\vi_VN.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\zh_CN.js" />
+    <Content Include="boot\libreria_calendario\compressed\translations\zh_TW.js" />
+    <Content Include="boot\libreria_calendario\legacy.js" />
+    <Content Include="boot\libreria_calendario\main.js" />
+    <Content Include="boot\libreria_calendario\picker.date.js" />
+    <Content Include="boot\libreria_calendario\picker.js" />
+    <Content Include="boot\libreria_calendario\picker.time.js" />
+    <Content Include="boot\libreria_calendario\rainbow.js" />
+    <Content Include="boot\libreria_calendario\themes\classic.css" />
+    <Content Include="boot\libreria_calendario\themes\classic.date.css" />
+    <Content Include="boot\libreria_calendario\themes\classic.time.css" />
+    <Content Include="boot\libreria_calendario\themes\default.css" />
+    <Content Include="boot\libreria_calendario\themes\default.date.css" />
+    <Content Include="boot\libreria_calendario\themes\default.time.css" />
+    <Content Include="boot\libreria_calendario\themes\main.css" />
+    <Content Include="boot\libreria_calendario\themes\rtl.css" />
+    <Content Include="boot\libreria_calendario\translations\ar.js" />
+    <Content Include="boot\libreria_calendario\translations\bg_BG.js" />
+    <Content Include="boot\libreria_calendario\translations\bs_BA.js" />
+    <Content Include="boot\libreria_calendario\translations\ca_ES.js" />
+    <Content Include="boot\libreria_calendario\translations\cs_CZ.js" />
+    <Content Include="boot\libreria_calendario\translations\da_DK.js" />
+    <Content Include="boot\libreria_calendario\translations\de_DE.js" />
+    <Content Include="boot\libreria_calendario\translations\el_GR.js" />
+    <Content Include="boot\libreria_calendario\translations\es_ES.js" />
+    <Content Include="boot\libreria_calendario\translations\et_EE.js" />
+    <Content Include="boot\libreria_calendario\translations\eu_ES.js" />
+    <Content Include="boot\libreria_calendario\translations\fa_IR.js" />
+    <Content Include="boot\libreria_calendario\translations\fi_FI.js" />
+    <Content Include="boot\libreria_calendario\translations\fr_FR.js" />
+    <Content Include="boot\libreria_calendario\translations\ge_GEO.js" />
+    <Content Include="boot\libreria_calendario\translations\gl_ES.js" />
+    <Content Include="boot\libreria_calendario\translations\he_IL.js" />
+    <Content Include="boot\libreria_calendario\translations\hi_IN.js" />
+    <Content Include="boot\libreria_calendario\translations\hr_HR.js" />
+    <Content Include="boot\libreria_calendario\translations\hu_HU.js" />
+    <Content Include="boot\libreria_calendario\translations\id_ID.js" />
+    <Content Include="boot\libreria_calendario\translations\is_IS.js" />
+    <Content Include="boot\libreria_calendario\translations\it_IT.js" />
+    <Content Include="boot\libreria_calendario\translations\ja_JP.js" />
+    <Content Include="boot\libreria_calendario\translations\km_KH.js" />
+    <Content Include="boot\libreria_calendario\translations\ko_KR.js" />
+    <Content Include="boot\libreria_calendario\translations\lt_LT.js" />
+    <Content Include="boot\libreria_calendario\translations\lv_LV.js" />
+    <Content Include="boot\libreria_calendario\translations\nb_NO.js" />
+    <Content Include="boot\libreria_calendario\translations\ne_NP.js" />
+    <Content Include="boot\libreria_calendario\translations\nl_NL.js" />
+    <Content Include="boot\libreria_calendario\translations\pl_PL.js" />
+    <Content Include="boot\libreria_calendario\translations\pt_BR.js" />
+    <Content Include="boot\libreria_calendario\translations\pt_PT.js" />
+    <Content Include="boot\libreria_calendario\translations\ro_RO.js" />
+    <Content Include="boot\libreria_calendario\translations\ru_RU.js" />
+    <Content Include="boot\libreria_calendario\translations\sk_SK.js" />
+    <Content Include="boot\libreria_calendario\translations\sl_SI.js" />
+    <Content Include="boot\libreria_calendario\translations\sr_RS_cy.js" />
+    <Content Include="boot\libreria_calendario\translations\sr_RS_lt.js" />
+    <Content Include="boot\libreria_calendario\translations\sv_SE.js" />
+    <Content Include="boot\libreria_calendario\translations\th_TH.js" />
+    <Content Include="boot\libreria_calendario\translations\tr_TR.js" />
+    <Content Include="boot\libreria_calendario\translations\uk_UA.js" />
+    <Content Include="boot\libreria_calendario\translations\vi_VN.js" />
+    <Content Include="boot\libreria_calendario\translations\zh_CN.js" />
+    <Content Include="boot\libreria_calendario\translations\zh_TW.js" />
+    <Content Include="boot\lib\SAPbobsCOM90.dll" />
+    <Content Include="boot\login.aspx" />
+    <Content Include="boot\logincontrol.aspx" />
+    <Content Include="boot\login_error.aspx" />
+    <Content Include="boot\index.aspx" />
+    <Content Include="boot\menu_em.aspx" />
+    <Content Include="boot\menu_admin_mant.aspx" />
+    <Content Include="boot\menu_admin.aspx" />
+    <Content Include="boot\menu.aspx" />
+    <Content Include="boot\orden_trabajo.aspx" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\css\gijgo.css" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\css\gijgo.min.css" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\fonts\gijgo-material.svg" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\gijgo.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\gijgo.min.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.bg-bg.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.bg-bg.min.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.de-de.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.de-de.min.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.es-es.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.es-es.min.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.fr-fr.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.fr-fr.min.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.it-it.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.it-it.min.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.pt-br.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.pt-br.min.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.ru-ru.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.ru-ru.min.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.tr-tr.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\messages\messages.tr-tr.min.js" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\js\popper.min.js" />
+    <Content Include="boot\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="boot\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="boot\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="boot\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="boot\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="boot\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="boot\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="boot\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="boot\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="boot\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="boot\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="boot\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="boot\vendor\chart.js\Chart.js" />
+    <Content Include="boot\vendor\chart.js\Chart.min.js" />
+    <Content Include="boot\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="boot\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="boot\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="boot\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="boot\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="boot\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="boot\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="boot\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="boot\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="boot\vendor\jquery\jquery.js" />
+    <Content Include="boot\vendor\jquery\jquery.min.js" />
+    <Content Include="boot\vendor\jquery\jquery.slim.js" />
+    <Content Include="boot\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="boot\css\style.scss" />
+    <Content Include="boot\img\Preloaders.url" />
+    <Content Include="boot\package-lock.json" />
+    <Content Include="boot\package.json" />
+    <Content Include="boot\pug\blank.pug" />
+    <Content Include="boot\pug\cards.pug" />
+    <Content Include="boot\pug\charts.pug" />
+    <Content Include="boot\pug\forgot-password.pug" />
+    <Content Include="boot\pug\includes\css\core.pug" />
+    <Content Include="boot\pug\includes\css\custom.pug" />
+    <Content Include="boot\pug\includes\footer.pug" />
+    <Content Include="boot\pug\includes\js\core.pug" />
+    <Content Include="boot\pug\includes\js\custom.pug" />
+    <Content Include="boot\pug\includes\modals\logout.pug" />
+    <Content Include="boot\pug\includes\navbar.pug" />
+    <Content Include="boot\pug\includes\scroll-to-top.pug" />
+    <Content Include="boot\pug\index.pug" />
+    <Content Include="boot\pug\login.pug" />
+    <Content Include="boot\pug\navbar.pug" />
+    <Content Include="boot\pug\register.pug" />
+    <Content Include="boot\pug\tables.pug" />
+    <Content Include="boot\scss\navbar\_navbar_colors.scss" />
+    <Content Include="boot\scss\navbar\_navbar_fixed.scss" />
+    <Content Include="boot\scss\navbar\_navbar_global.scss" />
+    <Content Include="boot\scss\navbar\_navbar_static.scss" />
+    <Content Include="boot\scss\navbar\_navbar_toggle.scss" />
+    <Content Include="boot\scss\sb-admin.scss" />
+    <Content Include="boot\scss\_cards.scss" />
+    <Content Include="boot\scss\_footer.scss" />
+    <Content Include="boot\scss\_global.scss" />
+    <Content Include="boot\scss\_login.scss" />
+    <Content Include="boot\scss\_mixins.scss" />
+    <Content Include="boot\scss\_utilities.scss" />
+    <Content Include="boot\scss\_variables.scss" />
+    <Content Include="boot\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="boot\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="boot\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="boot\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="boot\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="boot\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="boot\vendor\font-awesome\css\font-awesome.css.map" />
+    <Content Include="boot\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="boot\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="boot\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="boot\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="boot\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="boot\vendor\font-awesome\less\animated.less" />
+    <Content Include="boot\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="boot\vendor\font-awesome\less\core.less" />
+    <Content Include="boot\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="boot\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="boot\vendor\font-awesome\less\icons.less" />
+    <Content Include="boot\vendor\font-awesome\less\larger.less" />
+    <Content Include="boot\vendor\font-awesome\less\list.less" />
+    <Content Include="boot\vendor\font-awesome\less\mixins.less" />
+    <Content Include="boot\vendor\font-awesome\less\path.less" />
+    <Content Include="boot\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="boot\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="boot\vendor\font-awesome\less\stacked.less" />
+    <Content Include="boot\vendor\font-awesome\less\variables.less" />
+    <Content Include="boot\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="boot\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="boot\vendor\jquery\jquery.min.map" />
+    <Content Include="boot\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="boot\estilos\css\style.scss" />
+    <Content Include="boot\estilos\css\styles_loading.styl" />
+    <Content Include="boot\estilos\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="boot\estilos\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="boot\estilos\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="boot\estilos\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="boot\estilos\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="boot\estilos\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="boot\estilos\vendor\font-awesome\css\font-awesome.css.map" />
+    <Content Include="boot\estilos\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="boot\estilos\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="boot\estilos\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="boot\estilos\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="boot\estilos\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\animated.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\core.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\icons.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\larger.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\list.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\mixins.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\path.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\stacked.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\less\variables.less" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="boot\estilos\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="boot\estilos\vendor\jquery\jquery.min.map" />
+    <Content Include="boot\estilos\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="boot\libreria_calendario\themes-source\base.date.less" />
+    <Content Include="boot\libreria_calendario\themes-source\base.less" />
+    <Content Include="boot\libreria_calendario\themes-source\base.time.less" />
+    <Content Include="boot\libreria_calendario\themes-source\classic.date.less" />
+    <Content Include="boot\libreria_calendario\themes-source\classic.less" />
+    <Content Include="boot\libreria_calendario\themes-source\classic.time.less" />
+    <Content Include="boot\libreria_calendario\themes-source\default.date.less" />
+    <Content Include="boot\libreria_calendario\themes-source\default.less" />
+    <Content Include="boot\libreria_calendario\themes-source\default.time.less" />
+    <Content Include="boot\libreria_calendario\themes-source\rtl.less" />
+    <Content Include="boot\libreria_calendario\themes-source\_variables.less" />
+    <Content Include="boot\libreria_calendario\translations\FORMATTING.md" />
+    <Content Include="boot\libreria_calendario\translations\NAMING.md" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\fonts\gijgo-material.eot" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\fonts\gijgo-material.ttf" />
+    <Content Include="boot\plugins\gijgo-combined-1.9.11\fonts\gijgo-material.woff" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1921</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1921/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
